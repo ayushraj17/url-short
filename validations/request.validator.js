@@ -12,5 +12,6 @@ export const userAuthLoginRequestSchema = z.object({
 });
 
 export const urlShortenRequestSchema = z.object({
-	url: z.string().nonempty(),
+	url: z.url().nonempty(),
+	shorten: z.string().optional(),
 });
